@@ -2,6 +2,9 @@ package edu.cnm.deepdive.crapssimulator;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    TextView tally  = findViewById(R.id.tally);
+    tally.setText("This will be my win/loss tally line");
+    ListView rolls = findViewById(R.id.rolls);
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.single_roll,
+        getResources().getStringArray(R.array.dummy_rolls));
+    rolls.setAdapter(adapter);
   }
 
   @Override
