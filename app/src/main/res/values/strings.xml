@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">Craps Simulator</string>
+  <string name="run">Run</string>
+  <string name="reset">Reset</string>
+  <string name="run_toast">The Run option was selected.</string>
+  <string name="reset_toast">The Reset option was selected.</string>
+</resources>
