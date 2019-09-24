@@ -20,8 +20,7 @@ public class RoundAdapter extends ArrayAdapter<Roll> {
 
   private Drawable[] faces;
   private State state;
-
-
+  
   public RoundAdapter(Context context) {
     super(context, R.layout.single_roll);
     Resources res = context.getResources();
@@ -54,8 +53,8 @@ public class RoundAdapter extends ArrayAdapter<Roll> {
     int value = roll.getValue();
     ((ImageView) view.findViewById(R.id.die1)).setImageDrawable(faces[die1 - 1]);
     ((ImageView) view.findViewById(R.id.die2)).setImageDrawable(faces[die2 - 1]);
-    ((TextView) view.findViewById(R.id.value)).setText(
-        getContext().getString(R.string.value_format, value));
+    ((TextView) view.findViewById(R.id.value))
+        .setText(getContext().getString(R.string.value_format, value));
     return view;
   }
 
