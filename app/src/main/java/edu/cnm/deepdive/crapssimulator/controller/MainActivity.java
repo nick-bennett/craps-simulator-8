@@ -1,16 +1,13 @@
 package edu.cnm.deepdive.crapssimulator.controller;
 
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import edu.cnm.deepdive.craps.model.Game;
-import edu.cnm.deepdive.craps.model.Game.Roll;
 import edu.cnm.deepdive.craps.model.Game.Round;
 import edu.cnm.deepdive.crapssimulator.R;
 import edu.cnm.deepdive.crapssimulator.view.RoundAdapter;

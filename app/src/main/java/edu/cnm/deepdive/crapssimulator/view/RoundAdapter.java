@@ -2,7 +2,6 @@ package edu.cnm.deepdive.crapssimulator.view;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import edu.cnm.deepdive.craps.model.Game.Roll;
 import edu.cnm.deepdive.craps.model.Game.Round;
@@ -20,7 +20,7 @@ public class RoundAdapter extends ArrayAdapter<Roll> {
 
   private Drawable[] faces;
   private State state;
-  
+
   public RoundAdapter(Context context) {
     super(context, R.layout.single_roll);
     Resources res = context.getResources();
@@ -42,8 +42,9 @@ public class RoundAdapter extends ArrayAdapter<Roll> {
     }
   }
 
+  @NonNull
   @Override
-  public View getView(int position, View view, ViewGroup parent) {
+  public View getView(int position, View view, @NonNull ViewGroup parent) {
     if (view == null) {
       view = LayoutInflater.from(getContext()).inflate(R.layout.single_roll, parent, false);
     }
