@@ -4,18 +4,5 @@
   <string name="reset">Reset</string>
   <string name="run_toast">The Run option was selected.</string>
   <string name="reset_toast">The Reset option was selected.</string>
-  <string-array name="dummy_rolls">
-    <item>[1, 6] = 7</item>
-    <item>[2, 6] = 8</item>
-    <item>[3, 6] = 9</item>
-    <item>[4, 6] = 10</item>
-    <item>[5, 6] = 11</item>
-    <item>[6, 6] = 12</item>
-    <item>[1, 5] = 6</item>
-    <item>[2, 5] = 7</item>
-    <item>[3, 5] = 8</item>
-    <item>[4, 5] = 9</item>
-    <item>[5, 5] = 10</item>
-    <item>[6, 5] = 11</item>
-  </string-array>
+  <string name="tally_format">%1$d wins / %2$d plays  = %3$.2f%%</string>
 </resources>
