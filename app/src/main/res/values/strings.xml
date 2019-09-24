@@ -5,4 +5,5 @@
   <string name="run_toast">The Run option was selected.</string>
   <string name="reset_toast">The Reset option was selected.</string>
   <string name="tally_format">%1$d wins / %2$d plays  = %3$.2f%%</string>
+  <string name="value_format">= %d</string>
 </resources>

@@ -9,12 +9,20 @@
   </style>
 
   <style name="Tally">
-
     <item name="android:textColor">@color/colorPrimaryDark</item>
     <item name="android:textSize">20sp</item>
     <item name="android:textStyle">bold</item>
     <item name="android:layout_margin">8dp</item>
+  </style>
 
+  <style name="DiceImage" parent="AppTheme">
+    <item name="android:layout_margin">8dp</item>
+  </style>
+
+  <style name="DiceSum" parent="AppTheme">
+    <item name="android:textSize">20sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_width">50dp</item>
   </style>
 
 </resources>
