@@ -3,9 +3,22 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <item
-    android:id="@+id/run"
-    android:title="@string/run"
-    android:icon="@drawable/ic_play"
+    android:id="@+id/play_one"
+    android:title="@string/play_one"
+    android:icon="@drawable/ic_play_one"
+    app:showAsAction="always"/>
+
+  <item
+    android:id="@+id/fast_forward"
+    android:title="@string/fast_forward"
+    android:icon="@drawable/ic_fast_forward"
+    app:showAsAction="always"/>
+
+  <item
+    android:id="@+id/pause"
+    android:title="@string/pause"
+    android:icon="@drawable/ic_pause"
+    android:visible="false"
     app:showAsAction="always"/>
 
   <item

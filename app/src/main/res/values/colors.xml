@@ -3,4 +3,6 @@
   <color name="colorPrimary">#FF008577</color>
   <color name="colorPrimaryDark">#00574B</color>
   <color name="colorAccent">#D81B60</color>
+  <color name="winningRound">#2032CD32</color>
+  <color name="losingRound">#20FF0000</color>
 </resources>
