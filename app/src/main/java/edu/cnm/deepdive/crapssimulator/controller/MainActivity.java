@@ -79,10 +79,12 @@ public class MainActivity extends AppCompatActivity {
     viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     viewModel.getGame().observe(this, this::updateTally);
     viewModel.getRound().observe(this, this::updateRolls);
-    viewModel.isRunning().observe(this, (running) -> {
-      this.running = running;
-      invalidateOptionsMenu();
-    });
+    viewModel.isRunning().observe(this, this::setRunning);
+  }
+
+  private void setRunning(boolean running) {
+    this.running = running;
+    invalidateOptionsMenu();
   }
 
   private void updateRolls(Round round) {
