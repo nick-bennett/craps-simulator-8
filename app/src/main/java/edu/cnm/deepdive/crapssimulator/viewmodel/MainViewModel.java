@@ -12,10 +12,10 @@ import java.util.Random;
 
 public class MainViewModel extends AndroidViewModel {
 
-  private Random rng;
-  private MutableLiveData<Game> game;
-  private MutableLiveData<Round> round;
-  private MutableLiveData<Boolean> running;
+  private final Random rng;
+  private final MutableLiveData<Game> game;
+  private final MutableLiveData<Round> round;
+  private final MutableLiveData<Boolean> running;
   private Runner runner;
 
   public MainViewModel(@NonNull Application application) {
@@ -44,18 +44,18 @@ public class MainViewModel extends AndroidViewModel {
     game.setValue(game.getValue());
   }
 
-  public void run() {
+  public void fastForward() {
     if (runner != null) {
-      runner.halt();
+      runner.pause();
     }
     runner = new Runner();
     runner.start();
     running.setValue(true);
   }
 
-  public void stop() {
+  public void pause() {
     if (runner != null) {
-      runner.halt();
+      runner.pause();
     }
     runner = null;
   }
@@ -81,15 +81,13 @@ public class MainViewModel extends AndroidViewModel {
         for (int i = 0; i < limit; i++) {
           round = game.play();
         }
-        if (game == MainViewModel.this.game.getValue()) {
-          MainViewModel.this.round.postValue(round);
-          MainViewModel.this.game.postValue(game);
-        }
+        MainViewModel.this.round.postValue(round);
+        MainViewModel.this.game.postValue(game);
       }
       MainViewModel.this.running.postValue(false);
     }
 
-    public void halt() {
+    void pause() {
       running = false;
     }
 

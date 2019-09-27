@@ -13,7 +13,6 @@ import edu.cnm.deepdive.craps.model.Game.Round;
 import edu.cnm.deepdive.crapssimulator.R;
 import edu.cnm.deepdive.crapssimulator.view.RoundAdapter;
 import edu.cnm.deepdive.crapssimulator.viewmodel.MainViewModel;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
         viewModel.playOne();
         break;
       case R.id.fast_forward:
-        viewModel.run();
+        viewModel.fastForward();
         break;
       case R.id.pause:
-        viewModel.stop();
+        viewModel.pause();
         break;
       case R.id.reset:
         viewModel.reset();
