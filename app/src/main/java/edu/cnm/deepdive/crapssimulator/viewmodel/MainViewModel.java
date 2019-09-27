@@ -58,7 +58,6 @@ public class MainViewModel extends AndroidViewModel {
       runner.halt();
     }
     runner = null;
-    running.setValue(false);
   }
 
   public void reset() {
@@ -87,6 +86,7 @@ public class MainViewModel extends AndroidViewModel {
           MainViewModel.this.game.postValue(game);
         }
       }
+      MainViewModel.this.running.postValue(false);
     }
 
     public void halt() {
